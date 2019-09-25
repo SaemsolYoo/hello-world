@@ -119,7 +119,8 @@ padding: 5px 20px 6px 20px; margin-top: -5px;}
 .cont .column .ico_img {display: block; width: 60px; height: 60px;
   background: url(../img/icon.png) no-repeat; position: absolute; left: 0; top: 0;} /*이미지 넣어줄건데 이미지 inline구조니까 block으로 바꿔버리기*/
 .cont .column .ico_tit {padding-left: 70px; /*이거 안하면 옆에 아이콘으로 들어가 겹쳐버리니까*/ font-size: 16px; color: #2c94c4;}
-.cont .column .ico_desc {padding-left: 70px; border-bottom: 1px solid #e8e8; padding-bottom: 15px;}
+.cont .column .ico_desc {padding-left: 70px; border-bottom: 1px solid #e8e8; padding-bottom: 15px;
+margin-bottom: 15px; /*밑에 notice에 공통으로 아래 밀어주려고*/}
 
 .cont .col1 .ico_img {background-position: 0px -240px;}
 .cont .col2 .ico_img {background-position: 0px -300px;}
@@ -133,3 +134,47 @@ padding: 5px 20px 6px 20px; margin-top: -5px;}
 .cont .col4 .ico_img:hover {background-position: -60px -420px;}
 .cont .col5 .ico_img:hover {background-position: -60px -480px;}
 .cont .col6 .ico_img:hover {background-position: -60px -540px;}
+
+
+/* 게시판 */
+.notice {position: relative;} /*.notice a.more에 위치 : 절대적썼으니까!*/
+.notice h4 {font-size: 14px; color: #0093bd; padding-bottom: 3px; font-weight: bold;}
+.notice ul li {overflow: hidden;  /* width: 50px; height: 10px; 여기서의 역할은 내가 지정한영역(width,height)외에는 아무것도 보이지 말라 */
+text-overflow: ellipsis; /*내가 지정한 이외에 넘어가면 ... 으로 바뀌는거 */
+white-space: nowrap; /*이건 두줄로 넘어간걸 한줄로 바꿔버리는거!*/
+background: url(../img/dot.gif) no-repeat 0 8px; padding-left: 8px; /*dot위치 조정까지 해주기*/}
+.notice ul li a {font-size: 12px;}
+.notice a.more {position: absolute; right: 0; top: 0; display: block;
+  background: url(../img/icon.png) -150px -90px; width: 17px; height: 17px;} /*리스트 아래에 위치했었는데 이걸 오른쪽 위로 올려주기 위해서 절대적 쓰기!*/
+
+/* 게시판2 */
+.notice2 {position: relative; margin-top: 15px;}
+.notice2 h4 {font-size: 14px; color: #0093bd; padding-bottom: 3px; font-weight: bold;}
+.notice2 ul {}
+.notice2 li {overflow: hidden; background: url(../img/dot.gif) no-repeat 0 8px; padding-left: 8px; /*dot위치 조정까지 해주기*/}
+.notice2 li a {float: left; width: 65%; /*float썼으니까! 상위에다가 overflow:hidden; 써주기*/
+overflow: hidden;/* width: 50px; height: 10px; 여기서의 역할은 내가 지정한영역(width,height)외에는 아무것도 보이지 말라 */
+text-overflow: ellipsis; /*내가 지정한 이외에 넘어가면 ... 으로 바뀌는거 */
+white-space: nowrap; /*이건 두줄로 넘어간걸 한줄로 바꿔버리는거!*/
+font-size: 12px;}
+.notice2 li span {float: right; width: 30%; text-align: right;} /*float썼으니까! 상위에다가 overflow:hidden; 써주기*/
+.notice2 a.more {position: absolute; right: 0; top: 0; display: block;
+  background: url(../img/icon.png) -150px -90px; width: 17px; height: 17px;}
+
+/* 게시판3 */
+.notice3 {position: relative;}
+.notice3 h4 {font-size: 14px; color: #0093bd; padding-bottom: 5px; font-weight: bold;}
+.notice3 li {position: relative; padding: 8px 0 14px 60px;}
+.notice3 li a img {width: 50px; position: absolute; left: 0; top: 0; /* border: 1px solid #fff; 난 안할래*/}
+.notice3 li a strong {display: block;/*제목하고 설명이 붙어있는데, 인라인이어서 그런거다 그러니까 블록으로 바꿔줍시다.*/
+  overflow: hidden;/* width: 50px; height: 10px; 여기서의 역할은 내가 지정한영역(width,height)외에는 아무것도 보이지 말라 */
+  text-overflow: ellipsis; /*내가 지정한 이외에 넘어가면 ... 으로 바뀌는거 */
+  white-space: nowrap; /*이건 두줄로 넘어간걸 한줄로 바꿔버리는거!*/
+  font-size: 12px;}
+.notice3 li a span {display: block;/*제목하고 설명이 붙어있는데, 인라인이어서 그런거다 그러니까 블록으로 바꿔줍시다.*/
+  overflow: hidden;/* width: 50px; height: 10px; 여기서의 역할은 내가 지정한영역(width,height)외에는 아무것도 보이지 말라 */
+  text-overflow: ellipsis; /*내가 지정한 이외에 넘어가면 ... 으로 바뀌는거 */
+  white-space: nowrap; /*이건 두줄로 넘어간걸 한줄로 바꿔버리는거!*/
+  font-size: 12px;}
+.notice3 a.more {position: absolute; right: 0; top: 0; display: block;
+  background: url(../img/icon.png) -150px -90px; width: 17px; height: 17px;}
