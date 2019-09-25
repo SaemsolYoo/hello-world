@@ -100,6 +100,7 @@ padding: 5px 20px 6px 20px; margin-top: -5px;}
 .ban ul li img {width: 93%; border: 4px solid #A4CD54;}
 .ban ul li img:hover {border: 4px solid #F4DB57;}
 
+
 /*  컨텐츠 */
 .cont {overflow: hidden; padding-top: 30px; /*margin-top으로 주면 흰색으로 되어버려서 배경이 티난다*/} /*아래에 float:left; 줬으니까 무조건 그 상위에 overflow:hidden; 넣어주기!!!!!!!*/
 .cont .column {float: left; width: 289px; height: 363px;
@@ -178,3 +179,18 @@ font-size: 12px;}
   font-size: 12px;}
 .notice3 a.more {position: absolute; right: 0; top: 0; display: block;
   background: url(../img/icon.png) -150px -90px; width: 17px; height: 17px;}
+
+/* 마우스 오버 */
+.notice_hover {}
+.notice_hover h4 {font-size: 14px; color: #0093bd; padding-bottom: 5px; font-weight: bold;}
+.notice_hover ul {overflow: hidden;} /*하위에 float:left;해줫으니까 이게 상위니까 여기에 오버플로우 히든*/
+.notice_hover li {float: left; width:93px; margin-right: 5px; text-align: center;/*이게 상위박스라 여기에 center주는거다. em에 들어간 글씨 가운데설정하려구*/} /*그냥 이렇게하면 세번째 박스도 오른쪽에 5px마진들어가서 정렬 흐트러진다. */
+.notice_hover li:last-child {margin-right: 0;} /*위에 마진5px준거 여기서 마지막꺼 빼주는거다. 단 ie9부터 됨. 전버전 되게하려면 html이부분에 class달기*/
+.notice_hover li a {}
+.notice_hover li a span {position: relative; display: block; width: 93px; height: 93px; line-height: 93px;/*중간에오고싶어서*/} /*span에다가 relative값 주려는거니까 block값 주는것도 같이 해야한다! 그리고 영역width,height값 넣어서 지정해주기*/
+.notice_hover li a span img {width: 100%; /*위에 li에 width가 설정되어서 구역은 정해져있으니 그 구역에서의 100퍼인거다.*/}
+.notice_hover li a span em {visibility: hidden; /*일단 안보이게하 그리고 스팬에 다시 em해서 visible하기*/
+  position: absolute; left: 0; top: 0; background: rgba(0,0,0,0.7); color: #fff; width: 100%; height: 100%;}
+.notice_hover li a span:hover em {visibility: visible;}
+.notice_hover li a strong {padding-top: 3px; /*그냥 이거만 하면 안먹힌다. 왜? inline구조니까 (아래로이어서)*/
+display: inline-block; /*그래서 인라인성질가지면서 블록구조만들어 버리자.*/ font-size: 12px;}
