@@ -1,0 +1,135 @@
+@charset "UTF-8"; /* 이거 안하면 한글이 깨진다. 페이지소스 봤을때! */
+
+/* 스킵 내비게이션 */
+#skip {position: relative;} /*skip은 기준점이 되어야하니까 relative해주는거다*/
+#skip a {position: absolute; left: 0px; top: -35px; border: 1px solid #fff;
+color: #fff; background: #333; line-height: 30px; width: 140px; text-align: center;}
+/*position위치가 absolute절대적이다. 위치를 내맘대로 설정할수 있다. 단점은 둥떠있는 느낌이 난다*/
+#skip a:active,
+#skip a:focus {top: 0;} /*위에서 top을 -30으로 해놔서, 이제 탭을 누르면 top이 0이 되니까 보이는거다.*/
+
+/* 레이아웃 */  /*첨에 가상으로 보려고 해줬던거니까, 지금은 뺴줬다~ 삭제하셨는데 나는 일단 숨김*/
+#wrap {/* width: 100%; */}
+#header {/* width: 100%; */ height: 325px; background: url(../img/header_bg.jpg) center top repeat-x}
+                                      /*background 위치 설정 센터에 위쪽에 하는거*/
+#contents {/* width: 100%; */ /* height: 800px; background: #222; */}
+#footer {/* width: 100%; */ height: 200px; background: #333;}
+
+/* 컨텐츠 레이아웃 */
+#cont_nav {background: #fff; border: 20px dotted pink;}
+#cont_tit {/* width: 100%; height: 200px; */ background: #4CB5BE;}
+#cont_ban {/* width: 100%; height: 200px; */ background: #A4CD54; }
+#cont_cont {width: 100%; /* height: 200px; 깨지니까 없애기 (이건 첨에 구조보려고 넣었던것 이제 필요없음)*/ background: #EEF0A5;}
+
+/* 컨테이너 */
+.container {
+  width: 990px; margin: 0 auto; height: inherit; background: /* rgba(225,225,225,0.3); */
+}
+
+/* 헤더 */
+.header .header-menu {text-align: right;}
+.header .header-menu a {color: #fff; padding: 10px 0px 10px 13px; display: inline-block;}
+.header .header-menu a:hover {color:#666;}
+.header .header-tit {text-align: center;}
+.header .header-tit h1{background-color: #A4CD54; font-size: 28px;
+padding: 5px 20px 6px 20px; display: inline-block; color:#fff; margin-top: 40px;
+font-weight: normal; text-transform: uppercase;}
+.header .header-tit a {display: inline-block; background-color: #fff; font-size: 18px;
+padding: 5px 20px 6px 20px; margin-top: -5px;}
+.header .header-icon {text-align: center; margin: 30px;}
+.header .header-icon a {width: 60px; height: 60px; display: inline-block; background: url(../img/icon.png); margin: 0px 3px;}
+.header .header-icon a.icon1 {background-position: 0 0;}
+.header .header-icon a.icon2 {background-position: 0 -60px;}
+.header .header-icon a.icon3 {background-position: 0 -120px;}
+.header .header-icon a.icon4 {background-position: 0 -180px;}
+.header .header-icon a.icon1:hover {background-position: -60px 0;}
+.header .header-icon a.icon2:hover {background-position: -60px -60px;}
+.header .header-icon a.icon3:hover {background-position: -60px -120px;}
+.header .header-icon a.icon4:hover {background-position: -60px -180px;}
+
+/* float: left로 인한 영역깨짐은 (height:0이 되는거다.) 그래서 이거 방지법은
+1. 깨지는 영역에 똑같이 float: left;를 사용한다. (근데 이방법은 하나써주면 그거 주르륵 결국 모든 박스에 float:left;해줘야하는 상황이 되니까 별로 좋지 않다.)
+2. float의 성질을 차단하는 clear:both;를 사용한다. (근데 이것도 잘 사용하지 않는다. 왜냐? 복잡해지면 어떤 영역이 깨졌는지 찾기가 어려움.)
+3. float을 사용한 상위박스한테 overflow: hidden;을 사용한다. (완벽하게 100%좋지는 않지만, 이방법을 제일 많이 사용한다.)
+  overflow:hidden; 의 의미는. 내가 지정한 영역 이외에는 안보이게 해주는 거다. 이거쓰게되면 영역이 잡히는 효과가 생긴다. height값이 0이 안돼서.
+  단, 이걸 못하는 경우도 있는데 그건 2단메뉴를 사용할때.
+4. clearfix 를 사용한다. (이게 거의 100% 제일 좋은방법인데 --> 이건 반응형에서 배우겠다.)
+*/
+
+/* 전체 메뉴 */
+.nav {overflow: hidden; padding: 30px 0;}
+.nav div {} /* 이경우는 div에 자식이있으면 그 자식들까지도 선택된다. */
+.nav > div {float: left; width: 40%;} /* 이경우는 .nav의 자식인 div만 선택된다. 자식의 자식은 선택 안된다. 즉 첫번째 자식만 인정하는것 */
+.nav > div:last-child {width: 20%;}  /* 얘한테만 20%를 준다. 근데 last-child기능이 인터넷익스플로러9부터 사용가능하다. */
+.nav > div.last {width: 20%;} /* 그래서 아까 여기에 class="last"해줘서 이 태그를 이용한다.하위버전 호환위해서 */
+.nav > div h3 {font-size: 18px; color: #57BAB3; margin-bottom: 4px;}
+.nav > div ol {overflow: hidden;}
+.nav > div ol li {float: left; width: 50%;}
+.nav > div.last ol li {width: 100%;}
+.nav > div ol li a:hover {text-decoration: underline;}
+
+/* 타이틀 */
+.tit {position: relative; }
+/*아래 .tit .btn의 position태그의 기준점을 해주려고 하는거다. 이거 안하면 전체 브라우저 top0,right0 (맨오른쪽 모서리)로 가버림*/
+.tit h2 {font-size: 40px; color: #fff; text-align: center; padding: 5px 0; letter-spacing: 2px; /*글자간격*/
+        font-family: 'Monoton', cursive;}
+.tit .btn {position: absolute; top: 5px; right: 0; width: 60px; height: 60px;
+  background: url(../img/icon.png) no-repeat 0 -600px;}
+/*절대값을 쓰면 말그대로 절대적인 위치로 이동할수 있찌만, 단점은 영역이 없어져서 많이쓰면 좋지않다. 특히 반응형할때는 안쓰는게조음*/
+
+/* 배너 */
+.ban {position: relative; padding: 24px 0 20px;} /*인라인때매 생기는 아래 여백값 감안해서 여기 패딩값으로 여백 조정*/
+/*아래 .ban a.prev의 position태그의 기준점을 해주려고 하는거다. 이거 안하면 전체 브라우저 기준으로 (맨왼쪽오른쪽 모서리)로 가버림*/
+.ban a.prev {position: absolute; left: -80px; top: 60px; width: 43px; height: 43px;
+  background:url(../img/icon.png) no-repeat -150px 0;}
+/*a링크의 prev라고 표시해주는건데 그냥 prev만 써도 된다.*/
+.ban a.next {position: absolute; right: -80px;top: 60px; width: 43px; height: 43px;
+  background: url(../img/icon.png) no-repeat -150px -43px;}
+.ban a.prev:hover {background-position:-193px 0; }
+.ban a.next:hover {background-position:-193px -43px; }
+.ban ul {overflow: hidden;}
+.ban ul li {float: left; width: 330px;}
+.ban ul li:last-child {text-align: right;} /* ie9부터 적용 */
+.ban ul li:nth-child(2) {text-align: center;} /* ie9부터 적용 */
+.ban ul li.ban_img1 {text-align: left;}      /* 그래서 이렇게 쓰는거다 이렇게하면 모든 버전 다 호환 */
+.ban ul li.ban_img2 {text-align: center;}    /* 그래서 이렇게 쓰는거다 이렇게하면 모든 버전 다 호환 */
+.ban ul li.ban_img3 {text-align: right;;}    /* 그래서 이렇게 쓰는거다 이렇게하면 모든 버전 다 호환 */
+/* .ban ul li img {display: block;}*/ /*이미지는 inline구조여서 아래 여백이 생기니까. 블록구조로 바꿔준거다.*/
+/*근데 여기서 블록구조로 바꿔버리면, 위에위에 해준거 text-align:center가 안먹힌다. 이건 인라인구조에서만 먹히는거니까*/
+/*그래서 그냥 블럭구조 하지말고, 인라인상태로 두고, 대신에 패딩값으로 조절한다. 아래 여백이 있는거 감안해서 차이나게 패딩값 준다 (.ban에)*/
+.ban ul li img {width: 93%; border: 4px solid #A4CD54;}
+.ban ul li img:hover {border: 4px solid #F4DB57;}
+
+/*  컨텐츠 */
+.cont {overflow: hidden; padding-top: 30px; /*margin-top으로 주면 흰색으로 되어버려서 배경이 티난다*/} /*아래에 float:left; 줬으니까 무조건 그 상위에 overflow:hidden; 넣어주기!!!!!!!*/
+.cont .column {float: left; width: 289px; height: 363px;
+  margin: 0 30px 30px 0; padding-right: 30px;
+  position: relative; /*.cont .column .ico_img의 기준점 만들어주려고*/} /* col1 부터 col6까지 6개박스 공통적용*/
+/*그냥 이렇게하면 위에 컨텐츠레이아웃에 height값 걸려있어서 깨지니까 위로 올라가서 컨텐츠레이아웃에서 cont_cont 의 height값 없애기! */
+
+/* .cont .column.col1 {} 혹은 .cont .col1 {} 이렇게 개별적인요소를 쓰는거다. html에서 class="column col1"한거는 가명이 2개 인거임 */
+
+.cont .col1 {border-right: 1px solid #c8c8;}
+.cont .col2 {border-right: 1px solid #c8c8;}
+.cont .col3 {margin-right: 0; padding-right: 0;}
+.cont .col4 {border-right: 1px solid #c8c8;}
+.cont .col5 {border-right: 1px solid #c8c8;}
+.cont .col6 {margin-right: 0; padding-right: 0;}
+
+.cont .column .ico_img {display: block; width: 60px; height: 60px;
+  background: url(../img/icon.png) no-repeat; position: absolute; left: 0; top: 0;} /*이미지 넣어줄건데 이미지 inline구조니까 block으로 바꿔버리기*/
+.cont .column .ico_tit {padding-left: 70px; /*이거 안하면 옆에 아이콘으로 들어가 겹쳐버리니까*/ font-size: 16px; color: #2c94c4;}
+.cont .column .ico_desc {padding-left: 70px; border-bottom: 1px solid #c8c8; padding-bottom: 15px;}
+
+.cont .col1 .ico_img {background-position: 0px -240px;}
+.cont .col2 .ico_img {background-position: 0px -300px;}
+.cont .col3 .ico_img {background-position: 0px -360px;}
+.cont .col4 .ico_img {background-position: 0px -420px;}
+.cont .col5 .ico_img {background-position: 0px -480px;}
+.cont .col6 .ico_img {background-position: 0px -540px;}
+.cont .col1 .ico_img:hover {background-position: -60px -240px;}
+.cont .col2 .ico_img:hover {background-position: -60px -300px;}
+.cont .col3 .ico_img:hover {background-position: -60px -360px;}
+.cont .col4 .ico_img:hover {background-position: -60px -420px;}
+.cont .col5 .ico_img:hover {background-position: -60px -480px;}
+.cont .col6 .ico_img:hover {background-position: -60px -540px;}

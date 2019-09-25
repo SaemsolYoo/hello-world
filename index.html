@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8">
+    <meta name="author" content="saemsol"> <!--사이트 만든사람 설명하는 메타데이타-->
+    <meta name="description" content="웹 표준을 준수한 사이트 예제입니다."> <!--사이트 설명-->
+    <meta name="keywords" content="nowember4th, 사이트 만들기">
+    <meta name="generator" content="atom"> <!--어떤 프로그램으로 만들었는지-->
+    <title>SAMMY::WEBSTANDARD SITE</title>
+
+    <!-- CSS Style -->
+    <link rel="stylesheet" href="css/reset.css"> <!--reset이 젤 먼저 와야한다. 순서대로 연동되니까-->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- 웹 폰트 -->
+    <link href="https://fonts.googleapis.com/css?family=Nanum+Gothic&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Monoton&display=swap" rel="stylesheet">
+
+  </head>
+  <body>
+    <!-- 스킵 내비게이션 -->
+    <div id="skip">
+      <a href="#cont_nav">전체 메뉴 바로가기</a>
+      <a href="#cont_ban">배너 영역 바로가기</a>
+      <a href="#cont_cont">컨텐츠 영역 바로가기</a>
+    </div>
+    <!-- //스킵 내비게이션 -->
+
+
+    <div id="wrap">
+      <div id="header">
+         <div class="container">
+           <div class="header">
+             <div class="header-menu">
+               <a href="https://nowember4th.blog.me">blog</a>
+               <a href="https://www.instagram.com/sorie_h/">instagram</a>
+             </div>
+             <!-- //헤더 메뉴 -->
+             <div class="header-tit">
+               <h1>🌎 💫 Hello World! 🌈 💗</h1><br>
+               <!-- 지저분해서 일단 버리기
+               <a href="https://www.instagram.com/sorie_h/">nowember4th</a> -->
+             </div>
+             <!-- //헤더 타이틀-->
+
+             <!-- 이미지를 표현하는 방법
+                1. img 태그로 표현 (이미지가 의미가 있을 때) / alt태그를 해서 - 대체문자표현
+                2. CSS에서 background 속성으로 표현 (의미가 없을 때) / 대체 문자 필요 없음.
+                3. 이미지를 background 속성으로 넣고, / 그리고 가상으로 대체문자를 만들어준다.(=IR 효과) 왜? 웹표준 지켜야해서.
+                   이미지 스프라이트 기법을 사용하려고! 이게 편해서.
+                   즉, 이미지를 background 속성으로 넣으려면 (웹 표준을 준수하기 위해서 아래를 해야한다.)
+                   첫째, 가상으로 대체문자를 만들어주는 IR효과 알아야하고,
+                   둘째, 이미지 스프라이트 효과를 알아야 한다.
+                   처음이 어렵지만 3번인 이미지를 background속성으로 넣어주고 첫째,둘째 해주고 하는게 나중엔 더 편할것이다. -->
+
+             <div class="header-icon">
+               <a href="#" class="icon1"><span class="ir_pm">icon1</span></a>
+               <a href="#" class="icon2"><span class="ir_pm">icon2</span></a>
+               <a href="#" class="icon3"><span class="ir_pm">icon3</span></a>
+               <a href="#" class="icon4"><span class="ir_pm">icon4</span></a>
+             </div>
+             <!-- //헤더 아이콘-->
+           </div>
+         </div>
+      </div>
+      <!-- //header -->
+
+      <div id="contents">
+        <div id="cont_nav">
+          <div class="container">
+            <h2 class="ir_su">전체 메뉴</h2>
+            <div class="nav">
+              <div>
+                <h3>HTML Reference</h3>
+                <ol>
+                  <li><a href="#">HTML 태그(Tag)</a></li>
+                  <li><a href="#">블록 요소/인라인 요소</a></li>
+                  <li><a href="#">DTD 선언</a></li>
+                  <li><a href="#">언어 속성 설정</a></li>
+                  <li><a href="#">HTML &lt;title&gt;</a></li>
+                  <li><a href="#">HTML &lt;meta&gt;</a></li>
+                  <li><a href="#">특수문자</a></li>
+                  <li><a href="#">하이퍼 링크</a></li>
+                  <li><a href="#">HTML &lt;style&gt;</a></li>
+                  <li><a href="#">HTML &lt;html&gt;</a></li>
+                  <li><a href="#">HTML &lt;head&gt;</a></li>
+                  <li><a href="#">HTML &lt;div&gt;</a></li>
+                  <li><a href="#">HTML &lt;colgroup&gt;</a></li>
+                  <li><a href="#">HTML &lt;caption&gt;</a></li>
+                </ol>
+              </div>
+              <div>
+                <h3>CSS Reference</h3>
+                <ol>
+                   <li><a href="#">CSS 선택자</a></li>
+                   <li><a href="#">CSS 단위</a></li>
+                   <li><a href="#">CSS 색상</a></li>
+                   <li><a href="#">CSS 선언 방법</a></li>
+                   <li><a href="#">상대주소와 절대주소</a></li>
+                   <li><a href="#">CSS float</a></li>
+                   <li><a href="#">이미지 표현 방법</a></li>
+                   <li><a href="#">이미지 스프라이트</a></li>
+                   <li><a href="#">IR 효과</a></li>
+                   <li><a href="#">이미지 최적화</a></li>
+                   <li><a href="#">background-color</a></li>
+                   <li><a href="#">border-style</a></li>
+                   <li><a href="#">font-size</a></li>
+                   <li><a href="#">text-align</a></li>
+                </ol>
+              </div>
+              <div class="last">
+                <h3>Webstandard</h3>
+                <ol>
+                   <li><a href="#">웹 표준</a></li>
+                   <li><a href="#">웹 접근성</a></li>
+                   <li><a href="#">W3C</a></li>
+                   <li><a href="#">웹 접근성 연구소</a></li>
+                   <li><a href="#">네이버 널리</a></li>
+                   <li><a href="#">다음 다룸</a></li>
+                   <li><a href="#">Webstandard</a></li>
+                </ol>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- //cont_nav -->
+        <div id="cont_tit">
+          <div class="container">
+            <div class="tit">
+              <h2>"Where is our loves?"</h2>
+              <a href="#" class="btn"><span class="ir_pm">전체메뉴</span></a>
+            </div>
+          </div>
+        </div>
+        <!-- //cont_tit -->
+        <div id="cont_ban">
+          <div class="container">
+            <div class="ban">
+              <a href="#" class="prev"><span class="ir_pm">이전 이미지</span></a>
+              <ul>
+                <li class="ban_img1"><a href="https://www.youtube.com/watch?v=2cxTrZWp8mE" target="_blank"><img src="img/banner_link1.jpg" alt="박효신 유투브"></a></li>
+                <li class="ban_img2"><a href="https://www.youtube.com/watch?v=8HnLRrQ3RS4" target="_blank"><img src="img/banner_link2.jpg" alt="품비푸릿 유투브"></a></li>
+                <li class="ban_img3"><a href="https://www.youtube.com/user/AlecBenjaminMusic" target="_blank"><img src="img/banner_link3.jpg" alt="알렉벤자민 유투브"></a></li>
+              </ul>
+              <a href="#" class="next"><span class="ir_pm">다음 이미지</span></a>
+            </div>
+          </div>
+        </div>
+        <!-- //cont_ban -->
+        <div id="cont_cont">
+          <div class="container">
+            <div class="cont">
+              <div class="column col1">
+                <h3><span class="ico_img ir_pm">아이콘</span><span class="ico_tit">Notice</span></h3>
+                <p class="ico_desc">가장 웹 페이지에서 기본이 되는 게시판 유형입니다.</p>
+              </div>
+              <!-- //col1 -->
+              <div class="column col2">
+                <h3><span class="ico_img ir_pm">아이콘</span><span class="ico_tit">Notice</span></h3>
+                <p class="ico_desc">가장 웹 페이지에서 기본이 되는 게시판 유형입니다.</p>
+              </div>
+              <!-- //col2 -->
+              <div class="column col3">
+                <h3><span class="ico_img ir_pm">아이콘</span><span class="ico_tit">Notice</span></h3>
+                <p class="ico_desc">가장 웹 페이지에서 기본이 되는 게시판 유형입니다.</p>
+              </div>
+              <!-- //col3 -->
+              <div class="column col4">
+                <h3><span class="ico_img ir_pm">아이콘</span><span class="ico_tit">Notice</span></h3>
+                <p class="ico_desc">가장 웹 페이지에서 기본이 되는 게시판 유형입니다.</p>
+              </div>
+              <!-- //col4 -->
+              <div class="column col5">
+                <h3><span class="ico_img ir_pm">아이콘</span><span class="ico_tit">Notice</span></h3>
+                <p class="ico_desc">가장 웹 페이지에서 기본이 되는 게시판 유형입니다.</p>
+              </div>
+              <!-- //col5 -->
+              <div class="column col6">
+                <h3><span class="ico_img ir_pm">아이콘</span><span class="ico_tit">Notice</span></h3>
+                <p class="ico_desc">가장 웹 페이지에서 기본이 되는 게시판 유형입니다.</p>
+              </div>
+              <!-- //col6 -->
+            </div><!-- //class "cont" -->
+          </div>
+        </div>
+        <!-- //cont_cont -->
+      </div>
+      <!-- //contents -->
+
+      <div id="footer">
+        <div class="container">footer</div>
+      </div>
+      <!-- //footer -->
+    </div>
+    <!-- //wrap -->
+
+  </body>
+</html>
