@@ -19,7 +19,7 @@ color: #fff; background: #333; line-height: 30px; width: 140px; text-align: cent
 #cont_nav {background: #fff; border: 20px dotted pink;}
 #cont_tit {/* width: 100%; height: 200px; */ background: #4CB5BE;}
 #cont_ban {/* width: 100%; height: 200px; */ background: #A4CD54; }
-#cont_cont {width: 100%; /* height: 200px; 깨지니까 없애기 (이건 첨에 구조보려고 넣었던것 이제 필요없음)*/background: #F4F4F4;}
+#cont_cont {width: 100%; /* height: 200px; 깨지니까 없애기 (이건 첨에 구조보려고 넣었던것 이제 필요없음)*/background: #E8EAA2;}
 
 /* 컨테이너 */
 .container {
@@ -109,17 +109,17 @@ padding: 5px 20px 6px 20px; margin-top: -5px;}
 
 /* .cont .column.col1 {} 혹은 .cont .col1 {} 이렇게 개별적인요소를 쓰는거다. html에서 class="column col1"한거는 가명이 2개 인거임 */
 
-.cont .col1 {border-right: 1px solid #8FC76F;}
-.cont .col2 {border-right: 1px solid #8FC76F;}
+.cont .col1 {border-right: 1px solid #e8e8;}
+.cont .col2 {border-right: 1px solid #e8e8;}
 .cont .col3 {margin-right: 0; padding-right: 0;}
-.cont .col4 {border-right: 1px solid #8FC76F;}
-.cont .col5 {border-right: 1px solid #8FC76F;}
+.cont .col4 {border-right: 1px solid #e8e8;}
+.cont .col5 {border-right: 1px solid #e8e8;}
 .cont .col6 {margin-right: 0; padding-right: 0;}
 
 .cont .column .ico_img {display: block; width: 60px; height: 60px;
   background: url(../img/icon.png) no-repeat; position: absolute; left: 0; top: 0;} /*이미지 넣어줄건데 이미지 inline구조니까 block으로 바꿔버리기*/
 .cont .column .ico_tit {padding-left: 70px; /*이거 안하면 옆에 아이콘으로 들어가 겹쳐버리니까*/ font-size: 16px; color: #2c94c4;}
-.cont .column .ico_desc {padding-left: 70px; border-bottom: 1px solid #8FC76F; padding-bottom: 15px;}
+.cont .column .ico_desc {padding-left: 70px; border-bottom: 1px solid #e8e8; padding-bottom: 15px;}
 
 .cont .col1 .ico_img {background-position: 0px -240px;}
 .cont .col2 .ico_img {background-position: 0px -300px;}
