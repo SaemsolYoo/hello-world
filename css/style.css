@@ -23,7 +23,7 @@ color: #fff; background: #333; line-height: 30px; width: 140px; text-align: cent
 
 /* 컨테이너 */
 .container {
-  width: 990px; margin: 0 auto; height: inherit; background: /* rgba(225,225,225,0.3); */
+  width: 990px; margin: 0 auto; height: inherit; /* background:rgba(225,225,225,0.3); */
 }
 
 /* 헤더 */
