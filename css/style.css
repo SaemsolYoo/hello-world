@@ -223,3 +223,39 @@ display: inline-block; /*그래서 인라인성질가지면서 블록구조만�
 .notice_hover2 li a span:hover em {visibility: visible;}
 .notice_hover2 li a strong {padding-top: 75px; display: inline-block; font-size: 12px;}
 */
+
+
+/* 콘텐츠 요소를 보이지 않게 하는 방법
+1. display:none <-반대-> display:block  (영역이 사라짐)(***내용이랑 영역까지도 사라짐***)
+2. visibility: hidden; <-반대-> visibility: visible;    (영역유지)(***내용은 사라지는데, 영역은 남아있음**아까 위에서 마우스오버효과할땐, 영역은 남아있어도 되니까 이거 써준거다.*)
+3. opacity: 0; (투명도 조절하는건데, 얘도 안보이게해주는 역할한다.) <-반대-> opacity: 1; (영역유지)
+4. width:0 ; height:0; overflow:hidden; (이건 번외)(이건 우리가 컨트롤 할 수 있는거다. )
+ */
+
+ /* 탭 메뉴 tab_menu */
+.tab_menu {position: relative; border: 1px solid #ccc; padding: 8px; height: 105px;} /*여기가 기준점이 되어야 하니까 position: relative;준거다.*/
+.tab_menu ul {overflow: hidden; border-bottom: 1px solid #ccc;} /*아래에 float:left;줬으니까 상위인 여기에 overflow:hidden; 준거다!.*/
+.tab_menu ul li {float: left; /*float:left;줬으니까 위에다가 overflow:hidden; 써줘야한다.*/
+  border: 1px solid #ccc; margin-right: -1px; margin-bottom: -1px;
+/* padding: 5px 10px; 이건 여기다 주면 안된다. 왜냐면 여기다 주면 이 공간에는 링크가 활성화가 안된다.
+글씨 눌러야눌려지니까 그래서 a태그에 패딩넣어야한다. 근데 아래 a태그는 inline구조니까 안먹히니까 block화 시켜야한다.*/}
+.tab_menu ul li a {padding: 5px 10px; display: block;} /*a태그는 inline구조니까 패딩 안먹히니까 block화 시켜야한다*/
+.tab_menu ul li ul {position: absolute; left: 0; top: 48px; width: 270px; border: 0;}
+.tab_menu ul li ul li {float: none; border: 0; /*위에 li는 float이 필요했지만, 여기 li는 float이 필요 없으니까 float:none;해준다. */
+background: url(../img/dot.gif) no-repeat 9px 8px; padding-left: 18px;}
+.tab_menu ul li ul li a {overflow: hidden; text-overflow:ellipsis; white-space: nowrap; width: 100%;
+padding: 0 0 3px 0;}
+.tab_menu ul li.active {background: #2c94c4;}
+.tab_menu ul li.active a {color: #fff;}
+.tab_menu ul li.active ul li a {color: #333;}
+
+/* 게시판4 */
+.notice4 {position: relative; border: 1px solid #ccc;}
+.notice4 h4 {font-size: 14px; color: #0093bd; border-bottom: 1px solid #ccc; padding: 8px 10px; font-weight: 700; }
+.notice4 h4 em {color: #cf3292;}
+.notice4 ul {padding: 10px;}
+.notice4 ul li {background: url(../img/dot.gif) no-repeat 0 8px; overflow: hidden; padding-left: 8px; padding-bottom: 2px;}
+.notice4 ul li a {float: left; width: 60%; overflow: hidden;/*한줄효과 주려고 오버플로워 히든 */
+text-overflow: ellipsis; white-space: nowrap;}
+.notice4 ul li span {float: right; width: 30%; text-align: right;}
+.notice4 a.more {position: absolute; right: 9px; top: 9px;}
