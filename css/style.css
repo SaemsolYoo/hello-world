@@ -10,7 +10,7 @@ color: #fff; background: #333; line-height: 30px; width: 140px; text-align: cent
 
 /* 레이아웃 */  /*첨에 가상으로 보려고 해줬던거니까, 지금은 뺴줬다~ 삭제하셨는데 나는 일단 숨김*/
 #wrap {/* width: 100%; */}
-#header {/* width: 100%; */ height: 325px; background: url(../img/header_bg.jpg) center top repeat-x}
+#header {/* width: 100%; */ height: 325px; background: url(../img/header_bg3.jpg) center top repeat-x}
                                       /*background 위치 설정 센터에 위쪽에 하는거*/
 #contents {/* width: 100%; */ /* height: 800px; background: #222; */}
 #footer {/* width: 100%; */ height: 200px; background: #333;}
@@ -194,3 +194,32 @@ font-size: 12px;}
 .notice_hover li a span:hover em {visibility: visible;}
 .notice_hover li a strong {padding-top: 3px; /*그냥 이거만 하면 안먹힌다. 왜? inline구조니까 (아래로이어서)*/
 display: inline-block; /*그래서 인라인성질가지면서 블록구조만들어 버리자.*/ font-size: 12px;}
+
+/* 마우스 오버 2 (같이한 ) */
+.notice_hover2 {}
+.notice_hover2 ul {overflow: hidden;} /*아래박스에 float: left;줬으니까 상위박스인 여기에 overflow:hidden; 줘야한다.*/
+.notice_hover2 ul li {float: left; width: 93px; text-align: center; margin-right: 5px;}
+.notice_hover2 ul li:last-child {margin-right: 0;} /*마지막이미지는 오른쪽마진 안주려고 0 준다.*/
+.notice_hover2 li a {}
+.notice_hover2 li a span {position: relative; display: block; width: 93px; height: 93px;}
+.notice_hover2 li a span img {width: 100%;}
+.notice_hover2 li a span em {visibility: hidden;
+  color: #fff; background: rgba(0,0,0,0.7); position: absolute; left: 0; bottom: 0; width: 100%; }
+.notice_hover2 li a span:hover em {visibility: visible;}
+.notice_hover2 li a strong {padding-top: 75px; display: inline-block; font-size: 12px;}
+
+/* 마우스 오버 2 (내가한거) 음. 문제는 span em에서 width를 100% 를 줬었어가지구, position을 bottom으로 해도 안되었던거다.
+그래서 position absolute에서 left랑 top을 내가 줬던 거였다..
+.notice_hover2 {}
+.notice_hover2 ul {overflow: hidden;} 아래박스에 float: left;줬으니까 상위박스인 여기에 overflow:hidden; 줘야한다.
+.notice_hover2 ul li {float: left; width: 93px; text-align: center; margin-right: 5px;}
+.notice_hover2 ul li:last-child {margin-right: 0;} 마지막이미지는 오른쪽마진 안주려고 0 준다.
+.notice_hover2 li a {}
+.notice_hover2 li a span {position: relative; display: block; width: 93px; height: 20px;}
+.notice_hover2 li a span img {width: 100%;}
+.notice_hover2 li a span em {visibility: hidden;
+  color: #fff; background: rgba(0,0,0,0.7); position: absolute; left: 0; top: 73px;
+  width: 100%; height: 100%;}
+.notice_hover2 li a span:hover em {visibility: visible;}
+.notice_hover2 li a strong {padding-top: 75px; display: inline-block; font-size: 12px;}
+*/
