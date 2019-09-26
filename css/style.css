@@ -206,7 +206,7 @@ display: inline-block; /*그래서 인라인성질가지면서 블록구조만�
 .notice_hover2 li a span em {visibility: hidden;
   color: #fff; background: rgba(0,0,0,0.7); position: absolute; left: 0; bottom: 0; width: 100%; }
 .notice_hover2 li a span:hover em {visibility: visible;}
-.notice_hover2 li a strong {padding-top: 75px; display: inline-block; font-size: 12px;}
+.notice_hover2 li a strong {padding-top: 3px; display: inline-block; font-size: 12px;}
 
 /* 마우스 오버 2 (내가한거) 음. 문제는 span em에서 width를 100% 를 줬었어가지구, position을 bottom으로 해도 안되었던거다.
 그래서 position absolute에서 left랑 top을 내가 줬던 거였다..
