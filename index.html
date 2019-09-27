@@ -11,6 +11,7 @@
     <!-- CSS Style -->
     <link rel="stylesheet" href="css/reset.css"> <!--reset이 젤 먼저 와야한다. 순서대로 연동되니까-->
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/slick.css">
 
     <!-- 웹 폰트 -->
     <link href="https://fonts.googleapis.com/css?family=Nanum+Gothic&display=swap" rel="stylesheet">
@@ -136,6 +137,7 @@
         <div id="cont_ban">
           <div class="container">
             <div class="ban">
+<!--
               <a href="#" class="prev"><span class="ir_pm">이전 이미지</span></a>
               <ul>
                 <li class="ban_img1"><a href="https://www.youtube.com/watch?v=2cxTrZWp8mE" target="_blank"><img src="img/banner_link1.jpg" alt="박효신 유투브"></a></li>
@@ -143,6 +145,16 @@
                 <li class="ban_img3"><a href="https://www.youtube.com/user/AlecBenjaminMusic" target="_blank"><img src="img/banner_link3.jpg" alt="알렉벤자민 유투브"></a></li>
               </ul>
               <a href="#" class="next"><span class="ir_pm">다음 이미지</span></a>
+-->
+              <div><a href="https://www.youtube.com/watch?v=2cxTrZWp8mE" target="_blank"><img src="img/banner_link1.jpg" alt="박효신 유투브"></a></div>
+              <div><a href="https://www.youtube.com/watch?v=8HnLRrQ3RS4" target="_blank"><img src="img/banner_link2.jpg" alt="품비푸릿 유투브"></a></div>
+              <div><a href="https://www.youtube.com/user/AlecBenjaminMusic" target="_blank"><img src="img/banner_link3.jpg" alt="알렉벤자민 유투브"></a></div>
+              <div><a href="https://www.youtube.com/watch?v=2cxTrZWp8mE" target="_blank"><img src="img/banner_link1.jpg" alt="박효신 유투브"></a></div>
+              <div><a href="https://www.youtube.com/watch?v=8HnLRrQ3RS4" target="_blank"><img src="img/banner_link2.jpg" alt="품비푸릿 유투브"></a></div>
+              <div><a href="https://www.youtube.com/user/AlecBenjaminMusic" target="_blank"><img src="img/banner_link3.jpg" alt="알렉벤자민 유투브"></a></div>
+              <div><a href="https://www.youtube.com/watch?v=2cxTrZWp8mE" target="_blank"><img src="img/banner_link1.jpg" alt="박효신 유투브"></a></div>
+              <div><a href="https://www.youtube.com/watch?v=8HnLRrQ3RS4" target="_blank"><img src="img/banner_link2.jpg" alt="품비푸릿 유투브"></a></div>
+              <div><a href="https://www.youtube.com/user/AlecBenjaminMusic" target="_blank"><img src="img/banner_link3.jpg" alt="알렉벤자민 유투브"></a></div>
             </div>
           </div>
         </div>
@@ -442,7 +454,20 @@
 
     <!-- script -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="js/slick.min.js"></script>
     <script type="text/javascript"> //type은 html5에서는 생략가능
+      //배너
+      //html 마크업을 셋팅하고 --> css 연동하고 --> 제이쿼리 연동 --> 제이쿼리 호출 (밑에 쓴거)
+      $(".ban").slick({
+        infinite: true,
+        slidesToShow: 3,
+        slidesToScroll: 2,
+        autoplay: true,
+        autoplaySpeed: 3000,
+        dots: true
+        });
+
+
       //버튼을 클릭하면 전체 메뉴를 보이게 하세요. 그리고! 제이커리에서는 달라$ 표시를 해준다.
       $(".tit .btn").click(function(e){
         e.preventDefault();

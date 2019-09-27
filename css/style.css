@@ -78,30 +78,50 @@ padding: 5px 20px 6px 20px; margin-top: -5px;}
 /*절대값을 쓰면 말그대로 절대적인 위치로 이동할수 있찌만, 단점은 영역이 없어져서 많이쓰면 좋지않다. 특히 반응형할때는 안쓰는게조음*/
 .tit .btn.on {background-position: 0 -660px;}
 
-/* 배너 */
-.ban {position: relative; padding: 24px 0 20px;} /*인라인때매 생기는 아래 여백값 감안해서 여기 패딩값으로 여백 조정*/
+
+/* 배너 .xxxx없애려구 넣은거다. 비활성화 시키려구,, 왜냐면 슬릭배너 밑에 새로 넣을거라서*/
+.xxxx .ban {position: relative; padding: 24px 0 20px;} /*인라인때매 생기는 아래 여백값 감안해서 여기 패딩값으로 여백 조정*/
 /*아래 .ban a.prev의 position태그의 기준점을 해주려고 하는거다. 이거 안하면 전체 브라우저 기준으로 (맨왼쪽오른쪽 모서리)로 가버림*/
-.ban a.prev {position: absolute; left: -80px; top: 60px; width: 43px; height: 43px;
+.xxxx .ban a.prev {position: absolute; left: -80px; top: 60px; width: 43px; height: 43px;
   background:url(../img/icon.png) no-repeat -150px 0;}
 /*a링크의 prev라고 표시해주는건데 그냥 prev만 써도 된다.*/
-.ban a.next {position: absolute; right: -80px;top: 60px; width: 43px; height: 43px;
+.xxxx .ban a.next {position: absolute; right: -80px;top: 60px; width: 43px; height: 43px;
   background: url(../img/icon.png) no-repeat -150px -43px;}
-.ban a.prev:hover {background-position:-193px 0; }
-.ban a.next:hover {background-position:-193px -43px; }
-.ban ul {overflow: hidden;}
-.ban ul li {float: left; width: 330px;}
-.ban ul li:last-child {text-align: right;} /* ie9부터 적용 */
-.ban ul li:nth-child(2) {text-align: center;} /* ie9부터 적용 */
-.ban ul li.ban_img1 {text-align: left;}      /* 그래서 이렇게 쓰는거다 이렇게하면 모든 버전 다 호환 */
-.ban ul li.ban_img2 {text-align: center;}    /* 그래서 이렇게 쓰는거다 이렇게하면 모든 버전 다 호환 */
-.ban ul li.ban_img3 {text-align: right;;}    /* 그래서 이렇게 쓰는거다 이렇게하면 모든 버전 다 호환 */
+.xxxx .ban a.prev:hover {background-position:-193px 0; }
+.xxxx .ban a.next:hover {background-position:-193px -43px; }
+.xxxx .ban ul {overflow: hidden;}
+.xxxx .ban ul li {float: left; width: 330px;}
+.xxxx .ban ul li:last-child {text-align: right;} /* ie9부터 적용 */
+.xxxx .ban ul li:nth-child(2) {text-align: center;} /* ie9부터 적용 */
+.xxxx .ban ul li.ban_img1 {text-align: left;}      /* 그래서 이렇게 쓰는거다 이렇게하면 모든 버전 다 호환 */
+.xxxx .ban ul li.ban_img2 {text-align: center;}    /* 그래서 이렇게 쓰는거다 이렇게하면 모든 버전 다 호환 */
+.xxxx .ban ul li.ban_img3 {text-align: right;;}    /* 그래서 이렇게 쓰는거다 이렇게하면 모든 버전 다 호환 */
 /* .ban ul li img {display: block;}*/ /*이미지는 inline구조여서 아래 여백이 생기니까. 블록구조로 바꿔준거다.*/
 /*근데 여기서 블록구조로 바꿔버리면, 위에위에 해준거 text-align:center가 안먹힌다. 이건 인라인구조에서만 먹히는거니까*/
 /*그래서 그냥 블럭구조 하지말고, 인라인상태로 두고, 대신에 패딩값으로 조절한다. 아래 여백이 있는거 감안해서 차이나게 패딩값 준다 (.ban에)*/
+
+/* 배너 제이쿼리 입력해주느라 html수정해서 이것도 아래로 수정해준거다. 배너사진크기
 .ban ul li img {width: 93%; border: 4px solid #A4CD54;}
 .ban ul li img:hover {border: 4px solid #F4DB57;}
+*/
 
 
+/* 슬릭 배너 */
+.ban {position: relative; padding: 24px 0 40px;}
+.ban .slick-prev {position: absolute; left: -80px; top: 70px; width: 43px; height: 43px;
+  background:url(../img/icon.png) no-repeat -150px 0; text-indent: -9999px;}
+.ban .slick-next {position: absolute; right: -80px;top: 70px; width: 43px; height: 43px;
+  background: url(../img/icon.png) no-repeat -150px -43px; text-indent: -9999px;}
+.ban .slick-prev:hover {background-position:-193px 0; }
+.ban .slick-next:hover {background-position:-193px -43px;}
+.ban a img {width: 93%; border: 4px solid #A4CD54;}
+.ban a img:hover {border: 4px solid #F4DB57;}
+.ban .slick-slide {margin: 5px;}
+.ban .slick-dots {position: absolute; bottom: 15px; display: block; width: 100%; text-align: center;}
+.ban .slick-dots li {display: inline-block; width: 15px; height: 15px; margin: 5px;}
+.ban .slick-dots li button {font-size: 0; line-height: 0; display: block; width: 15px; height: 15px;
+cursor: pointer; background: #f1dd49; border-radius: 50%;}
+.ban .slick-dots li.slick-active button {background: #6cb3bc;}
 
 /*  컨텐츠 */
 .cont {overflow: hidden; padding-top: 30px; /*margin-top으로 주면 흰색으로 되어버려서 배경이 티난다*/} /*아래에 float:left; 줬으니까 무조건 그 상위에 overflow:hidden; 넣어주기!!!!!!!*/
