@@ -13,7 +13,7 @@ color: #fff; background: #333; line-height: 30px; width: 140px; text-align: cent
 #header {/* width: 100%; */ height: 325px; background: url(../img/header_bg3.jpg) center top repeat-x}
                                       /*background 위치 설정 센터에 위쪽에 하는거*/
 #contents {/* width: 100%; */ /* height: 800px; background: #222; */}
-#footer {/* width: 100%;  height: 200px; */ border-top: 1px solid # #BFBBB1; background: #333;}
+#footer {/* width: 100%;  height: 200px; */ border-top: 1px solid #BFBBB1; background: #333;}
 
 /* 컨텐츠 레이아웃 */
 #cont_nav {background: #fff; border: 20px dotted pink;}
