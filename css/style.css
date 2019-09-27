@@ -313,3 +313,4 @@ text-overflow: ellipsis; white-space: nowrap;}
 position: absolute; left: 0; top: 2px;}
 .footer li:first-child::before {width: 0; height: 0;}
 .footer address {color: #BFBBB1;}
+.footer .w3c {margin-top: 15px;}
