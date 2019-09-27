@@ -440,5 +440,24 @@
     </div>
     <!-- //wrap -->
 
+    <!-- script -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script type="text/javascript"> //type은 html5에서는 생략가능
+      //버튼을 클릭하면 전체 메뉴를 보이게 하세요. 그리고! 제이커리에서는 달라$ 표시를 해준다.
+      $(".tit .btn").click(function(e){
+        e.preventDefault();
+        //$("#cont_nav").css("display","block"); //css로 쓴다고하면 이렇게쓴다. #cont_nav {display:block;}
+        //$("#cont_nav").show(); //show라는 것은 display:none; 에서 block;으로 바꿔주는 method다.
+        //$("#cont_nav").fadeIn();
+        //$("#cont_nav").slideDown(); //얘 단점은 한번쓰면 없어진다는점.
+        //$("#cont_nav").toggle(); //얘는 한번펼치고 또 접을수도 있다.
+        //$("#cont_nav").fadeToggle();
+        $("#cont_nav").slideToggle(200); //숫자 200 넣어준거는 0.2초라는 뜻으로 속도를 좀 더 높어준거다.
+        //$(".tit .btn").addClass("on"); //버튼을 클릭했을때 모양을 바꾸고 싶어서 하는작업. 근데 다시 클릭해도 그대로니까 토글클래스를 써준다.
+        $(this).toggleClass("on"); //앞에 괄호에 (".tit .btn") 이렇게 써줫었는데, 이게 지금 자기 자신이니까 this라고 써준다.지금 이거 젤 상위작업이 버튼이니까.
+      });
+    </script>
+    <!-- //script -->
+
   </body>
 </html>
