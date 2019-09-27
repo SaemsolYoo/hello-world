@@ -13,7 +13,7 @@ color: #fff; background: #333; line-height: 30px; width: 140px; text-align: cent
 #header {/* width: 100%; */ height: 325px; background: url(../img/header_bg3.jpg) center top repeat-x}
                                       /*background 위치 설정 센터에 위쪽에 하는거*/
 #contents {/* width: 100%; */ /* height: 800px; background: #222; */}
-#footer {/* width: 100%; */ height: 200px; background: #333;}
+#footer {/* width: 100%;  height: 200px; */ border-top: 1px solid # #BFBBB1; background: #333;}
 
 /* 컨텐츠 레이아웃 */
 #cont_nav {background: #fff; border: 20px dotted pink;}
@@ -276,5 +276,40 @@ text-overflow: ellipsis; white-space: nowrap;}
 .gallery .gallery_btn li.gb_icon2 a:hover {background-position: -173px -143px;}
 .gallery .gallery_btn li.gb_icon3 a:hover {background-position: -173px -166px;}
 .gallery .gallery_btn li.gb_icon4 a:hover {background-position: -173px -189px;}
-.gallery .gallery_img {} /*얘는 이제 필요없당*/
+.gallery .gallery_img {} /*얘는 이제 필요없움*/
 .gallery .gallery_img img {width: 100%;}
+
+
+/* 로그인 */
+#login-wrap {background: #FAF7EB; padding: 15px; margin-bottom: 15px;}
+.login_header {overflow: hidden; font-size: 12px; height: 30px;}
+.login_header .lh_check {float: left; padding-right: 15px;}
+.login_header .lh_check .input_check {vertical-align: -2px;} /*맥에서는 체크박스랑 옆에 글씨가 라인이 맞는데, 윈도우os에서는 안맞아보이기때문에 조절해준거다.그래서 맥에서 지금 다시 안맞아 보이는거다.*/
+.login_header .lh_ip {float: left;}
+.login_header .lh_ip em {color: #0093bd; text-decoration: underline;}
+.login_content {position: relative;}
+.login_content .lc_btn {position: absolute; right: 0; top:0; width: 62px; height: 47px;
+  background: #fff; border: 1px solid #bebebe; }
+.login_content .input_text {width: 182px; height: 16px; padding: 2px 5px;
+  border: 1px solid #bebebe; margin-bottom: 3px; background: #fff;}
+.login_footer {margin-top: 5px;}
+.login_footer li {display: inline;}
+.login_footer li a {font-size: 12px;}
+
+/* 팝업 */
+.popup h4 {font-size: 14px; color: #0093bd; padding-bottom: 4px; font-weight: 700;}
+.popup ul {overflow: hidden;}
+.popup ul li {float: left; width: 93px; margin-right: 5px;}
+.popup ul li.last {margin-right: 0;}
+.popup ul li img {width: 100%;}
+
+/* 푸터 */
+.footer {padding: 25px 0; text-align: center;}
+/*float:left로 붙이면 플롯이 더 강해서 text-aline:center;가 안먹힌다. 그래서 여기서는 inline을 이용할거다.*/
+.footer ul {margin-bottom: 20px;}
+.footer li {display: inline; padding: 0 7px 0 10px; position: relative;}
+.footer li a {color:  #BFBBB1; }
+.footer li:before {content: ''; width: 1px; height: 12px; background: #BFBBB1;
+position: absolute; left: 0; top: 2px;}
+.footer li:first-child::before {width: 0; height: 0;}
+.footer address {color: #BFBBB1;}
