@@ -123,6 +123,8 @@ padding: 5px 20px 6px 20px; margin-top: -5px;}
 cursor: pointer; background: #f1dd49; border-radius: 50%;}
 .ban .slick-dots li.slick-active button {background: #6cb3bc;}
 
+.ban .slick-prev, .ban .slick-next, .ban .slick-dots li button:focus {outline: 0;} /*내가 응용한거. 눌렀을때 테투리 파란색 안보이게 하는거 */
+
 /*  컨텐츠 */
 .cont {overflow: hidden; padding-top: 30px; /*margin-top으로 주면 흰색으로 되어버려서 배경이 티난다*/} /*아래에 float:left; 줬으니까 무조건 그 상위에 overflow:hidden; 넣어주기!!!!!!!*/
 .cont .column {float: left; width: 289px; height: 363px;
