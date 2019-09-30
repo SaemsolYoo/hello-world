@@ -285,10 +285,10 @@ text-overflow: ellipsis; white-space: nowrap;}
 .notice4 a.more {position: absolute; right: 9px; top: 9px;}
 
 /* 갤러리 */
-.gallery {border: 1px solid #ccc; height: 254px; position: relative; overflow: hidden;/*지금 height값 지정해놨으니까, 내가 지정한 영역 외에는 보이지 마라 라는 명령으로 overflow: hidden;써줌*/ }
+.gallery {border: 1px solid #ccc; height: 254px; position: relative; overflow: hidden; /*지금 height값 지정해놨으니까, 내가 지정한 영역 외에는 보이지 마라 라는 명령으로 overflow: hidden;써줌*/ }
 .gallery h4 {font-size: 14px; color: #0093bd; border-bottom: 1px solid #ccc; padding: 10px 0 8px 11px; font-weight: bold;}
 .gallery .gallery_btn {position: absolute;right: 5px; top: 7px;}
-.gallery .gallery_btn ul {overflow: hidden;}
+.gallery .gallery_btn ul {/* overflow: hidden; 슬릭하느라 지움 */}
 .gallery .gallery_btn li {float: left; margin: 1px 2px;}
 .gallery .gallery_btn li a {display: block; width: 23px; height: 23px; background: url(../img/icon.png) no-repeat;}
 .gallery .gallery_btn li.gb_icon1 a {background-position: -150px -120px;}
@@ -302,6 +302,19 @@ text-overflow: ellipsis; white-space: nowrap;}
 .gallery .gallery_img {} /*얘는 이제 필요없움*/
 .gallery .gallery_img img {width: 100%;}
 
+/* 슬릭 갤러리 */
+.gallery {} /*필요없으니까 빼주기*/
+.gallery .gallery_btn button {float: left; margin: 1px 2px; display: block; width: 23px; height: 23px; background: url(../img/icon.png) no-repeat;}
+.gallery .gallery_btn .gb_icon1 {background-position: -150px -120px;}
+.gallery .gallery_btn .gb_icon2 {background-position: -150px -143px;}
+.gallery .gallery_btn .gb_icon3 {background-position: -150px -166px;}
+.gallery .gallery_btn .gb_icon4 {background-position: -150px -189px;}
+.gallery .gallery_btn .gb_icon1:hover {background-position: -173px -120px;}
+.gallery .gallery_btn .gb_icon2:hover {background-position: -173px -143px;}
+.gallery .gallery_btn .gb_icon3:hover {background-position: -173px -166px;}
+.gallery .gallery_btn .gb_icon4:hover {background-position: -173px -189px;}
+
+.gb_icon1, .gb_icon2, .gb_icon3, .gb_icon4:focus {outline: 0;} /*내가 응용한거. 눌렀을때 테투리 파란색 안보이게 하는거 */
 
 /* 로그인 */
 #login-wrap {background: #FAF7EB; padding: 15px; margin-bottom: 15px;}
