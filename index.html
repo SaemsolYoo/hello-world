@@ -355,14 +355,14 @@
                       </ul>
                     </li>
                     <li><a href="#">공지사항2</a>
-                      <ul style="display: none;">
+                      <ul>
                         <li><a href="#">두 번째 공지사항 탭 메뉴 테스트 목록입니다.</a></li>
                         <li><a href="#">두 번째 공지사항 탭 메뉴 테스트 목록입니다.</a></li>
                         <li><a href="#">두 번째 공지사항 탭 메뉴 테스트 목록입니다.</a></li>
                       </ul>
                     </li>
                     <li><a href="#">공지사항3</a>
-                      <ul style="display: none;">
+                      <ul>
                         <li><a href="#">세 번째 공지사항 탭 메뉴 테스트 목록입니다.</a></li>
                         <li><a href="#">세 번째 공지사항 탭 메뉴 테스트 목록입니다.</a></li>
                         <li><a href="#">세 번째 공지사항 탭 메뉴 테스트 목록입니다.</a></li>
@@ -456,6 +456,21 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="js/slick.min.js"></script>
     <script type="text/javascript"> //type은 html5에서는 생략가능
+
+      //탭메뉴
+      var $tab_list = $(".tab_menu");
+
+      $tab_list.find("ul ul").hide(); // css에서는 display:none;이라고 하는데, 제이커리에서는 hide라고 한다-->
+      $tab_list.find("li.active > ul").show();
+
+      function tabMenu(e){
+        e.preventDefault();
+        var $this = $(this);
+        $this.next("ul").show().parent("li").addClass("active").siblings("li").removeClass("active").find(">ul").hide();
+      }
+      $tab_list.find("ul>li>a").click(tabMenu).focus(tabMenu);
+
+
       //배너
       //html 마크업을 셋팅하고 --> css 연동하고 --> 제이쿼리 연동 --> 제이쿼리 호출 (밑에 쓴거)
       $(".ban").slick({
