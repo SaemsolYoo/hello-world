@@ -350,3 +350,10 @@ position: absolute; left: 0; top: 2px;}
 .footer li:first-child::before {width: 0; height: 0;}
 .footer address {color: #BFBBB1;}
 .footer .w3c {margin-top: 15px;}
+
+/* 레이어 팝업 */
+#layer {display: none; position: fixed; left: 50px; top: 50px; width: 700px; border: 10px solid #dceff7;
+box-shadow: 3px 3px 10px rgba(0,0,0,0.4);}
+#layer img {width: 100%; display: block; /*왜 블럭하냐면, 이미지는 인라인구조라, 디폴트로 라인헤이트나, 그런거때문에 밑에 공간 뜬다. 그래서 블록으로 바꿔준거다*/}
+#layer .close {position: absolute; right: 20px; top: 20px; background: #0093bd; padding: 1px 6px; color: #fff;}
+#layer .close:hover {text-decoration: underline;}
