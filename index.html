@@ -488,15 +488,15 @@
     <script src="js/slick.min.js"></script>
     <script src="js/lightgallery.min.js"></script>
     <script src="js/lightgallery-all.min.js"></script>
-    <!-- <script type="text/javascript"> //type은 html5에서는 생략가능 -->
+    <script type="text/javascript"> //type은 html5에서는 생략가능
 
     //라이트박스
-        $(".lightgallery").lightGallery(
-          thumbnail:true,
-          autoplay: true,
-          pause: 3000,
-          progressBar: true
-        );
+        $(".lightgallery").lightGallery({
+    thumbnail: true,
+    autoplay: true,
+    pause: 3000,
+    progressBar: true
+    });
 
     //윈도우 팝업
     $(".window").click(function(e){
